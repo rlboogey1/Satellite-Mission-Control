@@ -14,7 +14,9 @@ class Satellite {
     public: 
         Satellite(std::string name, double altitude, double velocity, double battery, double temperature);
         double getAltitude() const; 
+        double setAltitude(int alt);
         double getVelocity() const; 
+        double increaseSpeed(int speed);
         double getBattery() const; 
         double getTemperature() const; 
         void displayStatus() const; 

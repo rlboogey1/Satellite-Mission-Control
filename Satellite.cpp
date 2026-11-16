@@ -18,8 +18,21 @@ double Satellite::getAltitude() const {
     return altitude; 
 }
 
+double Satellite::setAltitude(int alt) {
+    return altitude = alt; 
+}
+
 double Satellite::getVelocity() const {
     return velocity;
+}
+
+double Satellite::increaseSpeed(int speed) {
+    if(speed <= 0 || speed >= 20) {
+        cout << "Invalid Input." << endl;
+    }
+    else {
+        return velocity += speed;
+    }
 }
 
 double Satellite::getTemperature() const {
@@ -37,3 +50,4 @@ void Satellite::displayStatus() const {
     cout << "Current Battery: " << battery << " Wh" << endl; 
     cout << "Current Temperature: " << temperature << " C" << endl;  
 }
+
